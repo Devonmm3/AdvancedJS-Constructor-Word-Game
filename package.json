@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Devonmm3/AdvancedJS-Constructor-Word-Game/issues"
   },
-  "homepage": "https://github.com/Devonmm3/AdvancedJS-Constructor-Word-Game#readme"
+  "homepage": "https://github.com/Devonmm3/AdvancedJS-Constructor-Word-Game#readme",
+  "dependencies": {
+    "chalk-stencil": "^1.0.0",
+    "sans-serif": "^1.0.0"
+  }
 }

@@ -18,4 +18,9 @@ var Letter = function (character) {
             this.isGuessedLetter = true;
         }
     }
+
+}
+
+module.export = {
+    Letter
 }

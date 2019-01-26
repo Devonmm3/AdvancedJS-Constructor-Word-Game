@@ -1,8 +1,8 @@
 var inquirer = require("inquirer");
 
 var Word = require("./word.js");
-var sansSerif = require("sans-serif");
-var chalkStencil = require("chalk-stencil");
+// var sansSerif = require("sans-serif");
+// var chalkStencil = require("chalk-stencil");
 
 var guess = 15;
 var points = 0;
@@ -14,7 +14,7 @@ var randomTeam;
 
 function startGame() {
 
-    console.log(chalkStencil.green("Guess the Football Teams!"));
+    console.log("Guess the Football Teams!");
 }
 
 function gameChooseTeam() {
@@ -39,10 +39,10 @@ function playerGuessTeam() {
             chosenTeam.checkTheGuess(guess);
             if (randomTeam.lowerCase().indexOf(guess.lowerCase()) === -1) {
                 guess--;
-                console.log(chalkStencil.purple("WRONG! " + guess + " chances left!"))
+                console.log("WRONG! " + guess + " chances left!")
             } else {
                 if (points < 5) {
-                    console.log(chalkStencil.red("Right on!"))
+                    console.log("Right on!")
                 }
             }
             if (randomTeam === chosenTeam.display()) {
@@ -50,7 +50,7 @@ function playerGuessTeam() {
                 guess = 10;
                 points++;
                 if (points < 5) {
-                    console.log(chalkStencil.red("YAS YAS YAS! Next Team Woohoo!"));
+                    console.log("YAS YAS YAS! Next Team Woohoo!");
                     gameChooseTeam();
                 } else {
                     winGame();
@@ -65,7 +65,7 @@ function playerGuessTeam() {
 }
 
 function loseGame() {
-    console.log(chalkStencil.purple("GAME OVER BOO!"));
+    console.log("GAME OVER BOO!");
     inquirer.prompt([{
             name: "confirm",
             type: "confirm",
@@ -79,14 +79,14 @@ function loseGame() {
                 gameChooseTeam();
                 playerGuessTeam();
             } else {
-                console.log(chalkStencil.red("See you next season!"));
+                console.log("See you next season!");
                 process.exit();
             }
         })
 }
 
 function winGame() {
-    sansSerif("TOUCHDOWN!!!!!!!!!!!!!!", function (err, data) {
+    ("TOUCHDOWN!!!!!!!!!!!!!!", function (err, data) {
         if (err) {
             console.log("Whoops! There is an error");
             console.dir(err);
@@ -107,7 +107,7 @@ function winGame() {
                 gameChooseTeam();
                 playerGuessTeam();
             } else {
-                console.log(chalkStencil.purple("bye bye!"))
+                console.log("bye bye!")
                 process.exit();
             }
         })

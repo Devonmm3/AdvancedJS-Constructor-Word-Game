@@ -21,6 +21,4 @@ var Letter = function (character) {
 
 }
 
-module.export = {
-    Letter
-}
+module.exports = Letter;

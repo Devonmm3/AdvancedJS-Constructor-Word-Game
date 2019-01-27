@@ -19,7 +19,8 @@
   "homepage": "https://github.com/Devonmm3/AdvancedJS-Constructor-Word-Game#readme",
   "dependencies": {
     "chalk-stencil": "^1.0.0",
-    "sans-serif": "^1.0.0",
-    "inquirer": "^6.2.1"
+    "inquirer": "^6.2.1",
+    "regex": "^0.1.1",
+    "sans-serif": "^1.0.0"
   }
 }
